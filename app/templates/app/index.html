@@ -2,11 +2,41 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>To Get information About all the Blood Banks</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body{
+      font-family: Open Sans;
+    }
+  </style>
 </head>
 <body>
-	{% for key in data %}
-		<p>{{ key }}</p>
-	{% endfor %}
+	<h1 class="text-center">All India Blood Bank Information</h1>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>State</th>
+        <th>District</th>
+        <th>Hospital</th>
+        <th>Contact No</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for key in data %}
+      <tr>
+        <th>{{ key.id }}</th>
+        <th>{{ key.state }}</th>
+        <th>{{ key.district }}</th>
+        <th>{{ key.h_name }}</th>
+        <th>{{ key.contact }}</th>
+        <th>{{ key.address }}</th>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>
