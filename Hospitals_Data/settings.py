@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'django_crontab'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'Hospitals_Data.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'bloodbank',
+        'USER': 'bloodbankuser',
+        'PASSWORD': 'geek4321',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -121,4 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-API_KEY = '698a0e2b2e576da34fde0d6533d8fdf9'
+API_KEY = os.environ.get("api_key")
+

@@ -17,7 +17,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th>#</th>
+        <th>Id</th>
         <th>State</th>
         <th>District</th>
         <th>Hospital</th>
@@ -26,14 +26,14 @@
       </tr>
     </thead>
     <tbody>
-    {% for key in data %}
+    {% for each in data %}
       <tr>
-        <th>{{ key.id }}</th>
-        <th>{{ key.state }}</th>
-        <th>{{ key.district }}</th>
-        <th>{{ key.h_name }}</th>
-        <th>{{ key.contact }}</th>
-        <th>{{ key.address }}</th>
+        <th>{{ each.id }}</th>
+        <th>{{ each.State }}</th>
+        <th>{{ each.District }}</th>
+        <th>{{ each.Hospital_name }}</th>
+        <th>{{ each.Contact }}</th>
+        <th>{{ each.Address }}</th>
       </tr>
     {% endfor %}
     </tbody>

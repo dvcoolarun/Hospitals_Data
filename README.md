@@ -13,10 +13,13 @@ To install or run the app
 
 * You also need to generate API key from the data.gov.in to use Particular API.
 
+* I stored the api_key in env variable and you need to save your in env variable and use them in settings.py.
+
+* Develop a Management command from which you get data and save it in DB.
+ 
 TODO
-* Need to add filters for Search
+* Need to add Search
 
-* Make the response time/load time faster
-
+* Hook the management command with cron job.
 
 

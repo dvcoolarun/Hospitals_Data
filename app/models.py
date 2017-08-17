@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class bloodbankdata(models.Model):
+    State = models.CharField(max_length=50)
+    District = models.CharField(max_length=50)
+    Hospital_name = models.TextField()
+    Contact = models.TextField()
+    Address = models.TextField()
